@@ -1,0 +1,19 @@
+﻿<Window x:Class="decal.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:decal.App"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}"
+        Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="86" />
+        </Grid.RowDefinitions>
+ 
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="logo" Source="{StaticResource ResourceKey=Logo}" HorizontalAlignment="Left" Width="513" Height="86" VerticalAlignment="Top" />
+        <local:ClockPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" FontFamily="{StaticResource ResourceKey=LogoFont}"  FontSize="70"/>
+    </Grid>
+</Window>

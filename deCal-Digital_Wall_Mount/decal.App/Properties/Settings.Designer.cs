@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace deCal_Digital_Wall_Mount.Properties
+namespace decal.App.Properties
 {
 
 
