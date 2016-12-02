@@ -35,8 +35,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -98,6 +106,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +119,20 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\decal.Calendar.API\decal.Calendar.API.csproj">
+      <Project>{d732059c-f01d-48c4-bdc2-1af3bbee9bea}</Project>
+      <Name>decal.Calendar.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\decal.Calendar.ViewModel\decal.Calendar.ViewModel.csproj">
+      <Project>{2757f699-8935-42f1-b951-055f45bc0c31}</Project>
+      <Name>decal.Calendar.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\decal.Calendar\decal.Calendar.csproj">
+      <Project>{6969e77c-7055-4234-9774-7e8c09f7f9c5}</Project>
+      <Name>decal.Calendar</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

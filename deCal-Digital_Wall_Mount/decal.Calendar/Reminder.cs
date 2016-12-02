@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace decal.Calendar
 {
-    class Reminder
+    public class Reminder
     {
         Appointment _owner;
         DateTime _datetime;
@@ -20,6 +20,11 @@ namespace decal.Calendar
         {
             get { return _datetime; }
             set { _datetime = value;  }
+        }
+
+        public Reminder(Appointment belongsTo)
+        {
+            _owner = belongsTo;
         }
     }
 }

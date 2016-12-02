@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace decal.Calendar
 {
-    class User
+    public class User
     {
         private int _id;
         private string _forename;
         private string _surname;
 
-        public String FirstName
+        public string FirstName
         {
             get { return _forename; }
         }
 
-        public String LastName
+        public string LastName
         {
             get { return _surname; }
         }

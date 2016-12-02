@@ -2,14 +2,16 @@
 using System.ComponentModel;
 using System.Timers;
 using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Threading;
 
-namespace decal.App
+namespace decal.App.Controls
 {
     class ClockPanel : Label
     {
-        private Timer _timer;
+        private DispatcherTimer _timer;
 
-        [BindableAttribute(true)]
+        [Bindable(true)]
         public new object Content
         {
             get { return base.Content; }
@@ -19,13 +21,18 @@ namespace decal.App
         public ClockPanel()
         {
             Content = DateTime.Now.ToShortTimeString();
-            _timer = new Timer(interval: 1000);
-            _timer.Elapsed += tick;
+            _timer = new DispatcherTimer();
+            _timer.Tick += tick;
+            _timer.Interval = new TimeSpan(0, 0, 1);
+            _timer.Start();
         }
 
-        private void tick(object sender, ElapsedEventArgs e)
+        private void tick(object sender, EventArgs e)
         {
             Content = DateTime.Now.ToShortTimeString();
+
+            // Forcing the CommandManager to raise the RequerySuggested event
+            CommandManager.InvalidateRequerySuggested();
         }
     }
 }

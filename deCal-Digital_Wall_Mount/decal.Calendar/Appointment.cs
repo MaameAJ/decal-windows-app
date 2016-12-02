@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace decal.Calendar
 {
-    class Appointment
+    public class Appointment
     {
         private User _owner;
         private Client _client;

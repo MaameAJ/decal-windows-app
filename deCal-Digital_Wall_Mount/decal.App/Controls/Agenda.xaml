@@ -4,9 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:decal.App.Controls"
+             xmlns:vm="clr-namespace:decal.Calendar.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Top" Width="Auto">
-        <Label x:Name="title" FontFamily="{StaticResource ResourceKey=LogoFont}" Content="AGENDA" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+             FontSize="24"
+             FontFamily="{StaticResource ResourceKey=LogoFont}"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Top" Width="Auto" >
+        <Label x:Name="title"  Content="AGENDA" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ItemsControl x:Name="appts" > <!--ItemsSource="{Binding Path=Appointments}">-->
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:Name="dataTemplate">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="TimeField" Text="{Binding Path=Time, StringFormat=HH:mm}" Foreground="Red" Margin="15 0 15 0"  Grid.Column="0"/>
+                        <TextBlock x:Name="ClientName" Text="{Binding Path=ClientName}" Foreground="Blue" Margin="15 0 15 0"  Grid.Column="1" />
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </StackPanel>
 </UserControl>

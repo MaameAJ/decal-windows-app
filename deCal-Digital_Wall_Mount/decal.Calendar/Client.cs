@@ -11,19 +11,20 @@ namespace decal.Calendar
         private string _surname;
         private string _phoneNumber;
 
-        public String FirstName
+        public string FirstName
         {
             get { return _forename; }
         }
 
-        public String LastName
+        public string LastName
         {
             get { return _surname; }
         }
 
-        public String PhoneNumber
+        public string PhoneNumber
         {
             get { return _phoneNumber; }
+            set { _phoneNumber = value; }
         }
 
         private static bool isInvalid(string str)

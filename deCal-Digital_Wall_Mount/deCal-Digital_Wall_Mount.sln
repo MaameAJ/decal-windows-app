@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "decal.Calendar", "decal.Cal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "decal.App", "decal.App\decal.App.csproj", "{C511F55B-74BA-4BAE-8FE8-D0395BD01F7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "decal.Calendar.ViewModel", "decal.Calendar.ViewModel\decal.Calendar.ViewModel.csproj", "{2757F699-8935-42F1-B951-055F45BC0C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "decal.Calendar.API", "decal.Calendar.API\decal.Calendar.API.csproj", "{D732059C-F01D-48C4-BDC2-1AF3BBEE9BEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C511F55B-74BA-4BAE-8FE8-D0395BD01F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C511F55B-74BA-4BAE-8FE8-D0395BD01F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C511F55B-74BA-4BAE-8FE8-D0395BD01F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2757F699-8935-42F1-B951-055F45BC0C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2757F699-8935-42F1-B951-055F45BC0C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2757F699-8935-42F1-B951-055F45BC0C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2757F699-8935-42F1-B951-055F45BC0C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D732059C-F01D-48C4-BDC2-1AF3BBEE9BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D732059C-F01D-48C4-BDC2-1AF3BBEE9BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D732059C-F01D-48C4-BDC2-1AF3BBEE9BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D732059C-F01D-48C4-BDC2-1AF3BBEE9BEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
